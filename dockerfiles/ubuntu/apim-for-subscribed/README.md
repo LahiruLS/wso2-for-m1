@@ -72,3 +72,10 @@ wso2am-for-m1:4.0.0
 * [Docker build command reference](https://docs.docker.com/engine/reference/commandline/build/)
 * [Docker run command reference](https://docs.docker.com/engine/reference/run/)
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+
+## How to get WSO2 updates during the container startup.
+
+To get the WSO2 updates you have to pass the WSO2 subscription credentials.
+```
+docker run --env WSO2_USER=<username> --env WSO2_USER_PASS=<yourpassword> -it -p 9443:9443 wso2apim-for-m1:4.0.0-ubuntu
+```

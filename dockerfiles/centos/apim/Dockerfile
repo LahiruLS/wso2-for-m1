@@ -57,6 +57,11 @@ RUN \
 USER ${USER_ID}
 WORKDIR ${USER_HOME}
 
+# copy the latest wso2 update 2.0 artifacts
+COPY --chown=wso2carbon:wso2 wso2update_darwin ${WSO2_SERVER_HOME}/bin
+COPY --chown=wso2carbon:wso2 wso2update_linux ${WSO2_SERVER_HOME}/bin
+COPY --chown=wso2carbon:wso2 wso2update_windows.exe ${WSO2_SERVER_HOME}/bin
+
 # set environment variables
 ENV WORKING_DIRECTORY=${USER_HOME} \
     WSO2_SERVER_HOME=${WSO2_SERVER_HOME}
